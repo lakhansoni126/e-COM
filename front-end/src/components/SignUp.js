@@ -13,7 +13,7 @@ const SignUp =()=>{
    
     useEffect(()=>{
         const auth = localStorage.getItem('user')
-    })
+    },[])
     
     
     const collectData= async()=>{

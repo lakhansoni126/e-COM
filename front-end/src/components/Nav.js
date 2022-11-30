@@ -1,28 +1,38 @@
 import React from "react";
-import{Link, useNavigate} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
-const Nav=()=>{
+const Nav = () => {
     const auth = localStorage.getItem('user')
-    const navigate= useNavigate();
-    const logout=()=>{
-         localStorage.clear();
-         navigate('/signup')
+    const navigate = useNavigate();
+    const logout = () => {
+        localStorage.clear();
+        navigate('/signup')
     }
 
-    return(
+    return (
         <div>
-            <ul className="nav-ul">
-                <li><Link to="/"> Product </Link></li>
-                <li><Link to="/add"> Add Products </Link></li>
-                <li><Link to="/update"> Update Products </Link></li>
-                <li><Link to="/profile"> Profile </Link></li>
-                <li> { auth ?<Link onClick={logout} to="/logout"> Logout </Link> :
-                 <Link to="/signup"> Sign up </Link>}</li>
+            <img src="https://cdn.freelogodesign.org/files/a64e96b16f60482f938b451e7bba6efc/thumb/logo_200x200.png?v=0" alt="logo"  className="logo" />
+            {
+                auth ?
+
+                <ul className="nav-ul">
+                    <li><Link to="/"> Product </Link></li>
+                    <li><Link to="/add"> Add Products </Link></li>
+                    <li><Link to="/update"> Update Products </Link></li>
+                    <li><Link to="/profile"> Profile </Link></li>
+                    <li><Link onClick={logout} to="/signup">Logout~{JSON.parse(auth).name}</Link></li>
+                </ul>
+                :
+                <ul className="nav-ul nav-right">
+                    <li>  <Link to="/signup"> Sign up </Link></li>
+                    <li> <Link to="/login" > Login </Link></li>
+                </ul>
+
+            }
 
 
-            </ul>
-        </div>
+        </div >
     )
 }
 

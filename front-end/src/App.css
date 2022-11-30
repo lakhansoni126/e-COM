@@ -15,7 +15,19 @@
   padding: 5px;
 }
 
-.register{
+.nav-right{
+text-align: right;
+  
+}
+.logo{
+  width: 45px;
+  height: 45ps;
+  border-radius: 50%;
+  float: left;
+  margin-top: 3px;
+  margin-left: 10px;
+}
+.register , .product{
   margin-left: 30%;
 }
 
@@ -36,6 +48,14 @@
   width: 300px;
   margin: 20px;
 
+}
+
+.ibs{
+  width: 400px;
+  margin: 10px;
+  height: 38px;
+  padding-left: 30px;
+  border: solid #282c34 1px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -76,4 +96,33 @@
   width: 100%;
   text-align: center;
   color: white;
+}
+
+.login{
+  margin-left: 30%;
+  margin-top: 100px;
+}
+
+.iP{
+  margin-top: -20px;
+  display: block;
+  margin-left: 20px;
+  color: red;
+}
+
+.pL{
+  text-align: center;
+  margin-top: 50px;
+
+}
+.pL ul li {
+  display: inline-block;
+  width: 150px;
+  border: 1px solid #282c34;
+  padding: 5px;
+
+}
+ 
+.pL ul{
+  margin: 0;
 }
